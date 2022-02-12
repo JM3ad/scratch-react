@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import Fake from "src/sub_module/test";
+import Fake from "src/sub_module/fake";
 import { MY_ENV_VARIABLE } from "env";
 
 const App = () => {
