@@ -1,0 +1,16 @@
+name: Test & Deploy
+on: [push]
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Build the code
+        runs: npm run build
+      - name: Commit & push to gh-pages branch
+        runs: |
+          git checkout -b gh-pages
+          git add .
+          git commit -m "Auto commit for deployment"
+          git push origin/gh-pages
