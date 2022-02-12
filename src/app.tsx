@@ -4,13 +4,13 @@ import Fake from "src/sub_module/test";
 import { MY_ENV_VARIABLE } from "env";
 
 const App = () => {
-  return (
-    <h1>
-      This is my React app!
-      {MY_ENV_VARIABLE}
-      <Fake />
-    </h1>
-  );
+    return (
+        <h1>
+            This is my React app!
+            {MY_ENV_VARIABLE}
+            <Fake />
+        </h1>
+    );
 };
 
 ReactDOM.render(<App />, document.getElementById("app"));
