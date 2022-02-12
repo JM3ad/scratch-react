@@ -1,8 +1,20 @@
 name: Test & Deploy
 on: [push]
 jobs:
+  Integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build the code
+        run: npm run build
+      - name: Run the tests
+        run: npm run test
   Deploy:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
