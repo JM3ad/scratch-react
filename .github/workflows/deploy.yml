@@ -7,9 +7,9 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Build the code
-        runs: npm run build
+        run: npm run build
       - name: Commit & push to gh-pages branch
-        runs: |
+        run: |
           git checkout -b gh-pages
           git add .
           git commit -m "Auto commit for deployment"
