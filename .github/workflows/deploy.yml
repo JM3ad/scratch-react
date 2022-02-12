@@ -15,6 +15,7 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    needs: Integrate
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
